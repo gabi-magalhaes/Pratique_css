@@ -1,0 +1,124 @@
+* {
+    margin: 0; /* Remove todas as margens padrão dos elementos */
+    padding: 0; /* Remove todos os paddings padrão dos elementos */
+    box-sizing: border-box; /* Faz com que o padding e a borda sejam incluídos na largura e altura do elemento */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão do corpo do documento */
+    line-height: 1.6; /* Define a altura da linha para melhorar a legibilidade do texto */
+    background-color: #fff; /* Define a cor de fundo do corpo */
+    color: #333; 
+    padding: 20px; /* Adiciona um padding de 20px ao redor do conteúdo do corpo */
+}
+
+body > header {
+    background-color: #333;
+    color: #fff;
+    text-align: center; /* Centraliza o texto dentro do cabeçalho */
+    padding: 20px; /* Adiciona um padding de 20px ao redor do conteúdo do cabeçalho */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px ao cabeçalho */
+    border-radius: 10px; /* Arredonda as bordas do cabeçalho com um raio de 10px */
+}
+
+header h1 {
+    font-size: 45px;
+    margin: 0; /* Remove margem padrão do h1 para evitar espaçamento extra */
+}
+
+ul {
+    list-style-type: none; /* Remove os marcadores de lista (bolinhas) */
+    display: flex; /* Transforma a lista em um contêiner flexível */
+    justify-content: center; /* Centraliza os itens da lista horizontalmente */
+    gap: 20px; /* Adiciona um espaçamento de 20px entre os itens da lista */
+    padding: 0; /* Remove padding padrão da lista */
+}
+
+li {
+    text-align: center; /* Centraliza o texto dentro de cada item da lista */
+    position: relative; /* Define a posição do item como relativa, permitindo posicionamento absoluto de elementos filhos */
+}
+
+li a {
+    color: #fff; 
+    text-decoration: none; /* Remove a decoração de texto (sublinhado) dos links */
+    transition: opacity 0.3s ease; /* Adiciona transição suave ao passar o mouse */
+}
+
+a:hover {
+    opacity: 0.8; /* Diminui a opacidade ao passar o mouse para um efeito visual simples */
+}
+
+/* Adiciona o traço após cada item, exceto o último */
+li:not(:last-child)::after {
+    content: "|"; /* Adiciona o caractere "|" após cada item da lista, exceto o último */
+    position: absolute; /* Posiciona o traço de forma absoluta em relação ao item da lista */
+    right: -10px; /* Ajusta a posição do traço para que não fique colado no texto */
+    color: #fff; 
+}
+
+#esportes, #economia, #tecnologia, #saude {
+    border-radius: 10px; 
+    margin: 20px; /* Adiciona margem externa */
+    padding: 20px; /* Adiciona padding interno */
+}
+
+#esportes {
+    background-color: #d3e79d;
+}
+
+#economia {
+    background-color: #ffd79c;
+}
+
+#tecnologia {
+    background-color: #a69cff;
+}
+
+#saude {
+    background-color: #9cebff;
+}
+
+.conteiner {
+    padding: 20px; /* Adiciona um padding de 20px ao redor do conteúdo do contêiner */
+    border-radius: 8px; /* Arredonda as bordas do contêiner com um raio de 8px */
+}
+
+.conteiner h2 {
+    color: #fff; 
+    background-color: #333; 
+    border-radius: 10px; 
+    text-align: center; 
+    font-size: 35px; 
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px ao título */
+    padding: 10px; /* Adiciona padding ao título para melhorar o espaçamento */
+}
+
+.articles {
+    display: flex; /* Transforma o contêiner de artigos em um contêiner flexível */
+    flex-wrap: wrap; /* Permite que os artigos quebrem para a próxima linha se não couberem na largura do contêiner */
+    gap: 20px; /* Adiciona espaçamento entre os artigos */
+    justify-content: center; /* Centraliza os artigos no contêiner */
+}
+
+.articles article {
+    border: 1px solid #ccc; /* Adiciona uma borda sutil */
+    border-radius: 10px;
+    width: calc(33.333% - 20px); /* Define a largura dos artigos com espaçamento */
+    padding: 15px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona transição suave */
+}
+
+.articles article:hover {
+    transform: translateY(-5px); /* Levanta o artigo ao passar o mouse */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao passar o mouse */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ccc; /* Adiciona borda sutil às imagens */
+    object-fit: cover;
+}
